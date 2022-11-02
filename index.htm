@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>JavaMon! Gotta' Code Them All!</title>
+
+    <style>
+
+        body {
+            margin: 0%;
+            border: 0%;
+            color: white;
+            font-family: "Press Start 2P";
+        }
+
+        #EntireScreen {
+            position: absolute;
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        #PlayArea {
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            width: 700px;
+            height: 400px;
+            margin-left: 27%;
+            margin-top: 12%;
+            display: flex;
+        }
+
+        #Fight {
+            flex-grow: 1;
+        }
+
+        #UI {
+            flex-grow: 10;
+            background-color: rgb(192, 192, 192);
+            display: flex;
+            flex-direction: column;
+        }
+
+        #Move1 {
+            border: 5px solid rgb(0, 0, 0);
+            flex-grow: 1;
+        }
+        #Move2 {
+            border: 5px solid rgb(0, 0, 0);
+            flex-grow: 1;
+        }
+        #Move3 {
+            border: 5px solid rgb(0, 0, 0);
+            flex-grow: 1;
+        }
+        #Move4 {
+            border: 5px solid rgb(0, 0, 0);
+            flex-grow: 1;
+        }
+
+        #Title {
+            text-align: center;
+        }
+
+        #StartBtn {
+            width: 100px;
+            height: 50px;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            margin-top: 13%;
+            margin-left: 28%;
+            color: white;
+            font-family: 'Press Start 2P';
+        }
+
+        .MenuItems {
+            opacity: 0;
+        }
+
+        #TextBox {
+            width: 300px;
+            height: 187px;
+            background-color: rgb(192, 192, 192);
+            border: 10px solid black;
+            opacity: 0;
+        }
+
+        #JavaMon {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="EntireScreen">
+        <div id="Title">
+            <h1> JavaMon! </h1>
+            <h3> Gotta' Code Them All!</h3>
+        </div>
+    </div>
+
+    <div id="PlayArea">
+        <div id="Fight">
+
+        </div>
+
+        <div id="JavaMon">
+            <img src="pie.gif">
+        </div>
+
+        <div id="TextBox">
+
+        </div>
+
+        <div id="UI">
+            <div id="Move1">
+                <button id="M1" class="MenuItems" onclick="Check1()"> Move One </button>
+            </div>
+            <div id="Move2">
+                <button id="M2" class="MenuItems" onclick="Check2()"> Move Two </button>
+            </div>
+            <div id="Move3">
+                <button id="M3" class="MenuItems" onclick="Check3()"> Move Three </button>
+            </div>
+            <div id="Move4">
+                <button id="M4" class="MenuItems" onclick="Check4()"> Move Four </button>
+            </div>
+        </div>
+    </div>
+
+    <button id="StartBtn" onclick="startGame()">
+        Start
+    </button>
+
+
+
+    <script>
+
+        const Questions = [
+            'Whats the difference between local and global variables?', 
+            'What is the variable type for a word?',
+            'How many variable types are there?',
+            'Is it hip to be square?',
+            'What is the correct format for a function?',
+            'What is the meaning of life?',
+            'Is JavaScript case sensitive?',
+            'Can a cat eat with a single toe?',
+            'Does my girlfriend like femboys?',
+            'What is the variable type for a number?'
+    ]
+        var Question = 1;
+        console.log(Question);
+
+        function startGame()
+        {
+            document.getElementById('StartBtn').style.opacity = 0 ;
+            document.getElementById('M1').style.opacity = 1 ;
+            document.getElementById('M2').style.opacity = 1 ;
+            document.getElementById('M3').style.opacity = 1 ;
+            document.getElementById('M4').style.opacity = 1 ;
+            document.getElementById('TextBox').style.opacity = 1 ;
+            document.getElementById('JavaMon').style.opacity = 1 ;
+
+            document.getElementById('TextBox').textContent = Questions[0];
+
+            document.getElementById('M1').textContent = 'Global controls the world ';
+            document.getElementById('M2').textContent = 'Local can only effect the file';
+            document.getElementById('M3').textContent = 'Global effects entire file';
+            document.getElementById('M4').textContent = 'Local variables can only be used in var';
+
+            
+        }
+
+        function Check1() 
+        {
+            if (Question = 1)
+            {
+            document.getElementById('TextBox').textContent = 'Wrong';
+
+
+            Question = Question + 1;
+            console.log(Question);
+            }
+        }
+        function Check2() 
+        {
+            if (Question = 1)
+            {
+            document.getElementById('TextBox').textContent = 'Wrong';
+
+
+            Question = Question + 1;
+            console.log(Question);
+            }
+        }
+        function Check3() 
+        {
+            if (Question = 1)
+            {
+            document.getElementById('TextBox').textContent = 'Correct';
+
+
+            Question = Question + 1;
+            console.log(Question);
+            }
+        }
+        function Check4() 
+        {
+            if (Question = 1)
+            {
+            document.getElementById('TextBox').textContent = 'Wrong';
+
+            Question = Question + 1;
+            console.log(Question);
+            }
+        }
+
+
+        if (Question = 2)
+        {
+        function Next() 
+        {
+            
+        }
+        }
+
+    </script>
+</body>
+</html>
